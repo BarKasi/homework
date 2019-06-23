@@ -1,0 +1,11 @@
+<?php
+echo "1112";
+echo "rrr";
+$line = fopen ("php://stdin","r");
+$line2 = fgets ($handle);
+for ($q = 1; $q < $line2; $q ++) {
+	if (($q % $line == 0) && ($q % $line1 == 0)) {
+}	elseif ($q % $line == 0) {
+}	elseif ($q % $line1 == 0) {
+}	else echo "$q";
+
