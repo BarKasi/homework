@@ -1,0 +1,5 @@
+Написать выборку всей информации о каждом фильме
+select film_series AS `название фильма`,name AS `серия фильма`,name_person AS `принимали участие`,position AS `отношение к фильму` from films f inner join film_filmseries ffs on(f.id = ffs.id_film) inner join films_series fs on(ffs.id_filmSeries = fs.id) inner join film_person fp on(f.id = fp.id_film) inner join persons p on(fp.id_person = p.id) ;
+
+ Вывести информацию о количестве фильмов в серии
+select name as `серия фильмов`,count(*) as `количество фильмов` from films f inner join film_filmseries ffs on (f.id = ffs.id_film) inner join films_series fs on (ffs.id_filmSeries = fs.id) group by name order by count(*) desc;
